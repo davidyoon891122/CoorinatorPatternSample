@@ -58,11 +58,10 @@
 		4925A2EB2A64AFFF005A815C /* CoordinatorPatternSample */ = {
 			isa = PBXGroup;
 			children = (
-				4925A2F02A64AFFF005A815C /* ViewController.swift */,
+				49E684962A64C82B004B4ADF /* Scene */,
 				4925A3002A64B0A7005A815C /* Delegate */,
 				4925A3012A64B0B2005A815C /* Resource */,
-				49E684912A64B97C004B4ADF /* Coodinator.swift */,
-				49E684932A64C5F6004B4ADF /* MainCoordinator.swift */,
+				49E684952A64C722004B4ADF /* Coordinator */,
 			);
 			path = CoordinatorPatternSample;
 			sourceTree = "<group>";
@@ -84,6 +83,23 @@
 				4925A2FA2A64B001005A815C /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		49E684952A64C722004B4ADF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				49E684912A64B97C004B4ADF /* Coodinator.swift */,
+				49E684932A64C5F6004B4ADF /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		49E684962A64C82B004B4ADF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4925A2F02A64AFFF005A815C /* ViewController.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
