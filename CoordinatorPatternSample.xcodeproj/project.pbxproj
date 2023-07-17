@@ -13,6 +13,7 @@
 		4925A2F62A64B001005A815C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4925A2F52A64B001005A815C /* Assets.xcassets */; };
 		4925A2F92A64B001005A815C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4925A2F72A64B001005A815C /* LaunchScreen.storyboard */; };
 		49E684922A64B97C004B4ADF /* Coodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E684912A64B97C004B4ADF /* Coodinator.swift */; };
+		49E684942A64C5F6004B4ADF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E684932A64C5F6004B4ADF /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4925A2F82A64B001005A815C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4925A2FA2A64B001005A815C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E684912A64B97C004B4ADF /* Coodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodinator.swift; sourceTree = "<group>"; };
+		49E684932A64C5F6004B4ADF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4925A3002A64B0A7005A815C /* Delegate */,
 				4925A3012A64B0B2005A815C /* Resource */,
 				49E684912A64B97C004B4ADF /* Coodinator.swift */,
+				49E684932A64C5F6004B4ADF /* MainCoordinator.swift */,
 			);
 			path = CoordinatorPatternSample;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				4925A2F12A64AFFF005A815C /* ViewController.swift in Sources */,
 				49E684922A64B97C004B4ADF /* Coodinator.swift in Sources */,
 				4925A2ED2A64AFFF005A815C /* AppDelegate.swift in Sources */,
+				49E684942A64C5F6004B4ADF /* MainCoordinator.swift in Sources */,
 				4925A2EF2A64AFFF005A815C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
