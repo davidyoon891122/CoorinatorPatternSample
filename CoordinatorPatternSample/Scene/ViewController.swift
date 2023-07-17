@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController{
     
+    weak var coordinator: MainCoordinator?
+    
     private lazy var targetLabel: UILabel = {
         let label = UILabel()
         label.text = "Target"
@@ -56,6 +58,28 @@ class ViewController: UIViewController{
         return segmentControl
     }()
     
+    private lazy var buyButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Buy", for: .normal)
+        button.setTitleColor(.label, for: .normal)
+        
+        button.addTarget(self, action: #selector(buyTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    private lazy var createAccountButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("CreateAccount", for: .normal)
+        button.setTitleColor(.label, for: .normal)
+        
+        button.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -68,7 +92,9 @@ private extension ViewController {
         
         [
             displayView,
-            segmentControl
+            segmentControl,
+            buyButton,
+            createAccountButton
         ]
             .forEach {
                 view.addSubview($0)
@@ -87,6 +113,17 @@ private extension ViewController {
             segmentControl.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             segmentControl.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        NSLayoutConstraint.activate([
+            buyButton.topAnchor.constraint(equalTo: segmentControl.bottomAnchor, constant: 32.0),
+            buyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            createAccountButton.topAnchor.constraint(equalTo: segmentControl.bottomAnchor, constant: 32.0),
+            createAccountButton.leadingAnchor.constraint(equalTo: buyButton.trailingAnchor, constant: 16.0),
+            createAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0)
+        ])
     }
     
     @objc
@@ -104,6 +141,16 @@ private extension ViewController {
         default:
             break
         }
+    }
+    
+    @objc
+    func buyTapped(_ sender: Any) {
+        coordinator?.buySubscription()
+    }
+    
+    @objc
+    func createAccount(_ sender: Any) {
+        coordinator?.createAccount()
     }
 }
 
